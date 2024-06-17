@@ -1,0 +1,34 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#6ff304",
+    "titleBar.activeBackground": "#69e024",
+    "titleBar.activeForeground": "#5809ce",
+    "icon.foreground": "#91ff00",
+    "symbolIcon.colorForeground": "#ff0000",
+    "icon.colorForeground": "#ff0000",
+    "activityBar.inactiveForeground": "#524747"
+  },
+
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "comment.block.documentation",
+          "comment.block.documentation.js",
+          "comment.line.double-slash.js",
+          "storage.type.class.jsdoc",
+          "entity.name.type.instance.jsdoc",
+          "variable.other.jsdoc",
+          "punctuation.definition.comment",
+          "punctuation.definition.comment.begin.documentation",
+          "punctuation.definition.comment.end.documentation"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#78108a"
+        }
+      }
+    ]
+  }
+}
