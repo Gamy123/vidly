@@ -3,6 +3,8 @@ const router = express.Router();
 const Joi = require('joi');
 const mongoose = require('mongoose');
 const {Zanra,validateZanra} = require('../models/zanra');
+const auth_mw = require("../middleware/auth-mw")
+const admin = require("../middleware/admin")
 
 router.get('/', async(req, res) => {
     const zanras = await Zanra.find().sort('name');
@@ -17,7 +19,7 @@ router.get('/:id', async(req, res) => {
     res.send(zanra);
 });
 
-router.post('/', async(req, res) => {
+router.post('/',auth_mw, async(req, res) => {
     const { error } = validateZanra(req.body);
     if (error) {
         return res.status(400).send(error.details[0].message);
@@ -39,8 +41,8 @@ router.put('/:id', async(req, res) => {
     res.send(zanra);
 });
 
-router.delete('/:id', async(req, res) => {
-    let zanra = await Zanra.findByIdAndRemove(req.params.id);
+router.delete('/:id',[auth_mw,admin], async(req, res) => {
+    let zanra = await Zanra.findByIdAndDelete(req.params.id);
     if (!zanra) {
         return res.status(404).send("The zanra with the given ID was not found.");
     }

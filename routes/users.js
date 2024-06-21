@@ -5,26 +5,13 @@ const mongoose = require('mongoose');
 const {User,validateUser} = require('../models/user');
 const _ = require('lodash');
 const bcrypt = require('bcrypt');
+const auth_mw = require('../middleware/auth-mw')
 
 
-router.get("/",async(req,res)=>{
-    const user = await User.find().sort('name')
-    if (user.length === 0){
-        return res.send("No users recorded");
-    }
-    res.send(user);
-});
 
-router.get("/:id",async(req,res)=>{
-    try{
-        const user = await User.findById(req.params.id);
-        if (!user){
-            return res.status(404).send("The user with the given ID was not found.");
-        }
-        res.send(user);
-    } catch (error) {
-        return res.status(400).send("Inncorect ID format");
-    }
+router.get("/me",auth_mw,async(req,res)=>{
+    const user = await User.findById(req.user._id).select('-password')
+    res.send(user)
 });
 
 router.post("/",async(req,res)=>{

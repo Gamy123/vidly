@@ -9,7 +9,7 @@ module.exports =function(req, res, next) {
     
 
     try{
-        jwt.verify(token,config.get("vidly_jwtPrivateKey"))
+        decoded = jwt.verify(token,config.get("vidly_jwtPrivateKey"))
         req.user = decoded
     }
     catch(err){
@@ -17,5 +17,3 @@ module.exports =function(req, res, next) {
     }
     next();
 }
-
-module.exports = auth
