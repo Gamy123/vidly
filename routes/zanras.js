@@ -6,7 +6,7 @@ const {Zanra,validateZanra} = require('../models/zanra');
 const auth_mw = require("../middleware/auth-mw")
 const admin = require("../middleware/admin")
 
-router.get('/', async(req, res) => {
+router.get('/',async(req, res,next) => {
     const zanras = await Zanra.find().sort('name');
     res.send(zanras);
 });
@@ -50,4 +50,3 @@ router.delete('/:id',[auth_mw,admin], async(req, res) => {
 });
 
 module.exports=router;
-//114

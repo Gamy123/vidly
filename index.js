@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require("express-async-errors")
 const express = require('express');
 const Joi = require('joi');
 const app = express();
@@ -10,6 +11,7 @@ const users = require("./routes/users.js")
 Joi.objectId = require('joi-objectid')(Joi);
 const auth = require('./routes/auth');
 const config = require('config');
+const error = require("./middleware/error.js")
 
 if (!config.get('vidly_jwtPrivateKey')){
     console.log('FATAL ERROR: jwtPrivateKey is not defined');
@@ -26,12 +28,10 @@ app.use('/api/users',users)
 app.use('/api/auth',auth)
 
 
+
 mongoose.connect('mongodb://localhost/zanras')
     .then(() => console.log("Conneted to MongoDB"))
     .catch(err => console.error('Could not connect'))
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
-
-
-// course 109
