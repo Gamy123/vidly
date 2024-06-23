@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const {Zanra,validateZanra} = require('../models/zanra');
 const auth_mw = require("../middleware/auth-mw")
 const admin = require("../middleware/admin")
+const logger = require('../middleware/logger');
 
 router.get('/',async(req, res,next) => {
     const zanras = await Zanra.find().sort('name');
