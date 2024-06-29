@@ -1,1 +1,19 @@
-{"level":50,"time":1719145375748,"pid":25020,"hostname":"DESKTOP-217I5MB","msg":"asdasd"}
+{"level":50,"time":1719646206261,"pid":11040,"hostname":"DESKTOP-217I5MB","msg":"Unhandled Rejection at:"}
+{"level":50,"time":1719646237438,"pid":11796,"hostname":"DESKTOP-217I5MB","msg":"Test error"}
+{"level":50,"time":1719646296965,"pid":7496,"hostname":"DESKTOP-217I5MB","msg":"Test error"}
+{"level":50,"time":1719646319766,"pid":21196,"hostname":"DESKTOP-217I5MB","msg":"Test error"}
+{"level":50,"time":1719646384214,"pid":16648,"hostname":"DESKTOP-217I5MB","msg":"Unhandled Rejection at:"}
+{"level":50,"time":1719646598185,"pid":20136,"hostname":"DESKTOP-217I5MB","msg":"Unhandled Rejection at:"}
+{"level":50,"time":1719646634567,"pid":17140,"hostname":"DESKTOP-217I5MB","msg":"Unhandled Rejection at:"}
+{"level":50,"time":1719646663792,"pid":12148,"hostname":"DESKTOP-217I5MB","msg":"Unhandled Rejection at:"}
+{"level":50,"time":1719646700602,"pid":15104,"hostname":"DESKTOP-217I5MB","msg":"Unhandled Rejection at:"}
+{"level":50,"time":1719646908629,"pid":9848,"hostname":"DESKTOP-217I5MB","msg":"Unhandled Rejection at:"}
+{"level":50,"time":1719646962672,"pid":19952,"hostname":"DESKTOP-217I5MB","msg":"Unhandled Rejection at:"}
+{"level":50,"time":1719647003779,"pid":18012,"hostname":"DESKTOP-217I5MB","msg":"Test error sadasd"}
+{"level":50,"time":1719647102984,"pid":1728,"hostname":"DESKTOP-217I5MB","msg":"logger is not defined"}
+{"level":50,"time":1719647117042,"pid":20768,"hostname":"DESKTOP-217I5MB","msg":"logger is not defined"}
+{"level":50,"time":1719647256775,"pid":10628,"hostname":"DESKTOP-217I5MB","msg":"logger.info is not a function"}
+{"level":50,"time":1719647497133,"pid":19564,"hostname":"DESKTOP-217I5MB","msg":"logger is not defined"}
+{"level":50,"time":1719647827277,"pid":14652,"hostname":"DESKTOP-217I5MB","msg":"config is not defined"}
+{"level":50,"time":1719647842458,"pid":14652,"hostname":"DESKTOP-217I5MB","msg":"config is not defined"}
+{"level":50,"time":1719648018210,"pid":6700,"hostname":"DESKTOP-217I5MB","msg":"FATAL ERROR: jwtPrivateKey is not defined"}
